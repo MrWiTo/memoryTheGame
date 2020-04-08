@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jMv-Px-J7g">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MENU-->
+        <scene sceneID="PIw-Ta-Ypz">
+            <objects>
+                <viewController id="jMv-Px-J7g" userLabel="MENU" customClass="MenuViewController" customModule="memoryTheGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mn0-Sy-VM9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="JqV-fh-0Pg">
+                                <rect key="frame" x="65.5" y="200" width="244" height="333.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-HJ-Yd4" customClass="CircleButton" customModule="memoryTheGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="84.5"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Start Game"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="JOO-2I-gq0" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="pci-WK-MNe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKD-dI-3Kq" customClass="CircleButton" customModule="memoryTheGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124.5" width="244" height="84.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Score Board"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="B34-dk-7f7" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="6eB-7M-pA0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUh-m6-lhD" customClass="CircleButton" customModule="memoryTheGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="249" width="244" height="84.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Surprise"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="SurpriseBtn:" destination="jMv-Px-J7g" eventType="touchUpInside" id="2Yi-1s-3sn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory The Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxu-J0-SNd">
+                                <rect key="frame" x="108.5" y="83" width="158" height="84"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89698523279999998" green="0.97278922800000001" blue="0.94684416059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JqV-fh-0Pg" firstAttribute="centerX" secondItem="mn0-Sy-VM9" secondAttribute="centerX" id="6PD-OE-Kki"/>
+                            <constraint firstItem="JqV-fh-0Pg" firstAttribute="top" secondItem="zxu-J0-SNd" secondAttribute="bottom" multiplier="1.2" id="Wkj-XN-frw"/>
+                            <constraint firstItem="JqV-fh-0Pg" firstAttribute="leading" secondItem="DsX-Lh-CuM" secondAttribute="centerX" multiplier="0.35" id="ZDn-rh-qzl"/>
+                            <constraint firstItem="JqV-fh-0Pg" firstAttribute="centerY" secondItem="mn0-Sy-VM9" secondAttribute="centerY" multiplier="1.1" id="h1G-D3-PWb"/>
+                            <constraint firstItem="JqV-fh-0Pg" firstAttribute="height" secondItem="mn0-Sy-VM9" secondAttribute="height" multiplier="0.5" id="mQo-sQ-XO4"/>
+                            <constraint firstItem="zxu-J0-SNd" firstAttribute="centerX" secondItem="mn0-Sy-VM9" secondAttribute="centerX" id="mSB-vu-LF7"/>
+                            <constraint firstItem="zxu-J0-SNd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DsX-Lh-CuM" secondAttribute="top" constant="10" id="vxV-OR-ruT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DsX-Lh-CuM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rdF-XR-CDC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tAy-m5-VyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-614"/>
+        </scene>
+        <!--GAME-->
+        <scene sceneID="BdD-YY-vN1">
+            <objects>
+                <viewController id="JOO-2I-gq0" userLabel="GAME" customClass="GameViewContoller" customModule="memoryTheGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dfz-Ym-tJg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory The Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKS-bc-nnE">
+                                <rect key="frame" x="108.5" y="69" width="158" height="84"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xeu-pu-xM2" userLabel="StackView Cards">
+                                <rect key="frame" x="10" y="183.5" width="355" height="333.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-bI-Jid" userLabel="Top Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnk-20-JJ6" userLabel="Card Btn1">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="98"/>
+                                                <state key="normal" title="Button" image="reverse"/>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="JOO-2I-gq0" eventType="touchUpInside" id="U77-Op-atk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hf-B2-RfZ" userLabel="Card Btn2">
+                                                <rect key="frame" x="125" y="0.0" width="105" height="98"/>
+                                                <state key="normal" title="Button" image="reverse"/>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="JOO-2I-gq0" eventType="touchUpInside" id="11V-p3-w1H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZC-i1-o8b" userLabel="Card Btn3">
+                                                <rect key="frame" x="250" y="0.0" width="105" height="98"/>
+                                                <state key="normal" title="Button" image="reverse"/>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="JOO-2I-gq0" eventType="touchUpInside" id="AfK-is-ReN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0qq-pN-fom" userLabel="Middle Stack View">
+                                        <rect key="frame" x="0.0" y="118" width="355" height="97.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMG-sN-ReY" userLabel="Card Btn4">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="97.5"/>
+                                                <state key="normal" title="Button" image="reverse"/>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="JOO-2I-gq0" eventType="touchUpInside" id="edG-8i-PHt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovg-s2-lUv" userLabel="Card Btn5">
+                                                <rect key="frame" x="125" y="0.0" width="105" height="97.5"/>
+                                                <state key="normal" title="Button" image="reverse"/>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="JOO-2I-gq0" eventType="touchUpInside" id="MLW-YR-BW2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qss-RO-wnw" userLabel="Card Btn6">
+                                                <rect key="frame" x="250" y="0.0" width="105" height="97.5"/>
+                                                <state key="normal" title="Button" image="reverse"/>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="JOO-2I-gq0" eventType="touchUpInside" id="feH-fS-xFO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HNv-to-2u3" userLabel="Bottom Stack View">
+                                        <rect key="frame" x="0.0" y="235.5" width="355" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTy-zR-cUQ" userLabel="Card Btn7">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="98"/>
+                                                <state key="normal" title="Button" image="reverse"/>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="JOO-2I-gq0" eventType="touchUpInside" id="2Mp-gQ-gLi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWk-UT-e2a" userLabel="Card Btn8">
+                                                <rect key="frame" x="125" y="0.0" width="105" height="98"/>
+                                                <state key="normal" title="Button" image="reverse"/>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="JOO-2I-gq0" eventType="touchUpInside" id="ZXT-U8-5Mh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkC-dr-OXA" userLabel="Card Btn9">
+                                                <rect key="frame" x="250" y="0.0" width="105" height="98"/>
+                                                <state key="normal" title="Button" image="reverse"/>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="JOO-2I-gq0" eventType="touchUpInside" id="bIv-Ja-lwa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="yxM-Bn-B3D" userLabel="Bottom Stuff Stack View">
+                                <rect key="frame" x="10" y="562" width="355" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he8-bb-3sP" customClass="CircleButton" customModule="memoryTheGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="42.5" width="85" height="42.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Menu">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="jMv-Px-J7g" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="xPa-nb-1V3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ML3-IO-Ut6" userLabel="Start Btn" customClass="CircleButton" customModule="memoryTheGame" customModuleProvider="target">
+                                        <rect key="frame" x="135" y="0.0" width="85" height="85"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Start"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="45"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startBtn:" destination="JOO-2I-gq0" eventType="touchUpInside" id="dLn-n6-TOM"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tjA-U5-JOw" userLabel="Score StackView">
+                                        <rect key="frame" x="270" y="0.0" width="85" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2C-d2-1cj" userLabel="Score">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="42.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agB-M4-TSQ" customClass="CircleButton" customModule="memoryTheGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="42.5" width="85" height="42.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="saveBtn:" destination="JOO-2I-gq0" eventType="touchUpInside" id="IcQ-Oj-ohJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tjA-U5-JOw" firstAttribute="height" secondItem="yxM-Bn-B3D" secondAttribute="height" id="3hY-Rg-4wL"/>
+                                    <constraint firstItem="he8-bb-3sP" firstAttribute="height" secondItem="yxM-Bn-B3D" secondAttribute="height" multiplier="0.5" id="rv0-U9-oGp"/>
+                                    <constraint firstItem="ML3-IO-Ut6" firstAttribute="height" secondItem="yxM-Bn-B3D" secondAttribute="height" id="yNg-Ps-iQ3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91663247349999999" green="0.97639924290000002" blue="0.95629340409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xeu-pu-xM2" firstAttribute="top" secondItem="IKS-bc-nnE" secondAttribute="bottom" multiplier="1.2" id="7WD-K3-UCg"/>
+                            <constraint firstItem="IKS-bc-nnE" firstAttribute="centerX" secondItem="Dfz-Ym-tJg" secondAttribute="centerX" id="8aX-hB-giS"/>
+                            <constraint firstItem="IKS-bc-nnE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rZb-Vo-dk1" secondAttribute="top" constant="10" id="AR6-Ge-YZy"/>
+                            <constraint firstAttribute="trailing" secondItem="Xeu-pu-xM2" secondAttribute="trailing" constant="10" id="Dja-Ra-26P"/>
+                            <constraint firstItem="Xeu-pu-xM2" firstAttribute="leading" secondItem="rZb-Vo-dk1" secondAttribute="leading" constant="10" id="PVW-G6-NKH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yxM-Bn-B3D" secondAttribute="bottom" constant="20" id="Ugq-Ro-BLE"/>
+                            <constraint firstItem="Xeu-pu-xM2" firstAttribute="centerY" secondItem="Dfz-Ym-tJg" secondAttribute="centerY" multiplier="1.05" id="f9t-H7-82J"/>
+                            <constraint firstItem="yxM-Bn-B3D" firstAttribute="leading" secondItem="rZb-Vo-dk1" secondAttribute="leading" constant="10" id="iHF-FT-K5o"/>
+                            <constraint firstItem="Xeu-pu-xM2" firstAttribute="height" secondItem="Dfz-Ym-tJg" secondAttribute="height" multiplier="0.5" id="kgh-Lx-q7J"/>
+                            <constraint firstItem="yxM-Bn-B3D" firstAttribute="top" secondItem="Xeu-pu-xM2" secondAttribute="bottom" constant="45" id="mNQ-2C-lWZ"/>
+                            <constraint firstItem="rZb-Vo-dk1" firstAttribute="trailing" secondItem="yxM-Bn-B3D" secondAttribute="trailing" constant="10" id="uDd-9y-Ji4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rZb-Vo-dk1"/>
+                    </view>
+                    <connections>
+                        <outlet property="Points" destination="L2C-d2-1cj" id="L3m-dH-bXB"/>
+                        <outlet property="cardBtn1" destination="Pnk-20-JJ6" id="wV6-TO-Jb7"/>
+                        <outlet property="cardBtn2" destination="3hf-B2-RfZ" id="P4I-JR-3S2"/>
+                        <outlet property="cardBtn3" destination="rZC-i1-o8b" id="fvi-kI-qiB"/>
+                        <outlet property="cardBtn4" destination="zMG-sN-ReY" id="2fb-aN-QeK"/>
+                        <outlet property="cardBtn5" destination="Ovg-s2-lUv" id="lau-c9-4th"/>
+                        <outlet property="cardBtn6" destination="qss-RO-wnw" id="zSR-vZ-ii7"/>
+                        <outlet property="cardBtn7" destination="eTy-zR-cUQ" id="EvE-uh-eC4"/>
+                        <outlet property="cardBtn8" destination="LWk-UT-e2a" id="ASV-Hu-JjM"/>
+                        <outlet property="cardBtn9" destination="zkC-dr-OXA" id="yaY-pq-ygl"/>
+                        <outlet property="saveBtn" destination="agB-M4-TSQ" id="DsN-Ao-ODl"/>
+                        <outlet property="startBtn" destination="ML3-IO-Ut6" id="a0i-A4-Cdo"/>
+                        <segue destination="vQa-Pp-LNY" kind="presentation" identifier="SaveScoreController" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="51n-yg-BZG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOV-Wt-pcz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1527" y="-1368"/>
+        </scene>
+        <!--SCOREBOARD-->
+        <scene sceneID="jLu-db-0Nm">
+            <objects>
+                <viewController id="B34-dk-7f7" userLabel="SCOREBOARD" customClass="ScoreBoardViewController" customModule="memoryTheGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JMD-yR-Cy5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3zZ-5d-Eqk" userLabel="TableViewScore">
+                                <rect key="frame" x="19" y="200" width="337.5" height="333.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <sections/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory The Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CE-29-Adx">
+                                <rect key="frame" x="108.5" y="83" width="158" height="84"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3b-tB-rQ4" customClass="CircleButton" customModule="memoryTheGame" customModuleProvider="target">
+                                <rect key="frame" x="19" y="593.5" width="93.5" height="47"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jMv-Px-J7g" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="ERD-Ae-nmM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89698523279999998" green="0.97278922800000001" blue="0.94684416059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D3b-tB-rQ4" firstAttribute="leading" secondItem="gt7-6S-QgS" secondAttribute="centerX" multiplier="0.1" id="35g-Qy-Qiv"/>
+                            <constraint firstItem="3zZ-5d-Eqk" firstAttribute="top" secondItem="8CE-29-Adx" secondAttribute="bottom" multiplier="1.2" id="8No-UM-tIb"/>
+                            <constraint firstItem="8CE-29-Adx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gt7-6S-QgS" secondAttribute="top" constant="10" id="IYo-7h-o1i"/>
+                            <constraint firstItem="3zZ-5d-Eqk" firstAttribute="centerX" secondItem="JMD-yR-Cy5" secondAttribute="centerX" id="ST1-cE-cPv"/>
+                            <constraint firstItem="3zZ-5d-Eqk" firstAttribute="height" secondItem="JMD-yR-Cy5" secondAttribute="height" multiplier="0.5" id="cE6-ID-tNd"/>
+                            <constraint firstItem="D3b-tB-rQ4" firstAttribute="top" secondItem="3zZ-5d-Eqk" secondAttribute="bottom" constant="60" id="d6b-TY-U1P"/>
+                            <constraint firstItem="3zZ-5d-Eqk" firstAttribute="centerY" secondItem="JMD-yR-Cy5" secondAttribute="centerY" multiplier="1.1" id="fpa-R4-LW1"/>
+                            <constraint firstItem="D3b-tB-rQ4" firstAttribute="width" secondItem="JMD-yR-Cy5" secondAttribute="width" multiplier="0.25" id="oxi-eG-J12"/>
+                            <constraint firstItem="3zZ-5d-Eqk" firstAttribute="leading" secondItem="gt7-6S-QgS" secondAttribute="centerX" multiplier="0.1" id="rge-dY-0rY"/>
+                            <constraint firstItem="8CE-29-Adx" firstAttribute="centerX" secondItem="JMD-yR-Cy5" secondAttribute="centerX" id="zmI-ET-aze"/>
+                            <constraint firstItem="D3b-tB-rQ4" firstAttribute="height" secondItem="JMD-yR-Cy5" secondAttribute="height" multiplier="0.07" id="zuq-84-ygk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gt7-6S-QgS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5xJ-hb-IFk"/>
+                    <connections>
+                        <outlet property="tableViewScore" destination="3zZ-5d-Eqk" id="Eru-FZ-8eg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCv-3a-ltN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424.8" y="-615.74212893553226"/>
+        </scene>
+        <!--SAVESCORE-->
+        <scene sceneID="gif-A0-LD8">
+            <objects>
+                <viewController id="vQa-Pp-LNY" userLabel="SAVESCORE" customClass="SaveScoreViewController" customModule="memoryTheGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cYy-HT-i2d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory The Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ti5-C6-eGQ">
+                                <rect key="frame" x="108.5" y="57.5" width="158" height="84"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiD-Ws-oxu" customClass="CircleButton" customModule="memoryTheGame" customModuleProvider="target">
+                                <rect key="frame" x="10" y="600.5" width="94" height="46.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jMv-Px-J7g" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="1Oi-eL-bEw"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bRy-iN-Fl7">
+                                <rect key="frame" x="128" y="269" width="119" height="129"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your nick:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbc-nk-oHt">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rlV-8K-3G1">
+                                        <rect key="frame" x="0.0" y="45" width="119" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXc-n5-ckV" customClass="CircleButton" customModule="memoryTheGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99" width="119" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="SubmitBtn:" destination="vQa-Pp-LNY" eventType="touchUpInside" id="h8F-d7-sPH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93288505079999995" green="0.97995346780000003" blue="0.96571856739999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ti5-C6-eGQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wkj-Oh-3nr" secondAttribute="top" constant="10" id="Fur-0t-U9l"/>
+                            <constraint firstItem="bRy-iN-Fl7" firstAttribute="top" secondItem="Ti5-C6-eGQ" secondAttribute="bottom" multiplier="1.9" id="GDV-kC-nJ6"/>
+                            <constraint firstItem="IiD-Ws-oxu" firstAttribute="leading" secondItem="Wkj-Oh-3nr" secondAttribute="leading" constant="10" id="Y4e-cx-d4D"/>
+                            <constraint firstItem="IiD-Ws-oxu" firstAttribute="width" secondItem="cYy-HT-i2d" secondAttribute="width" multiplier="0.25" id="d6C-Do-hgE"/>
+                            <constraint firstItem="bRy-iN-Fl7" firstAttribute="centerX" secondItem="cYy-HT-i2d" secondAttribute="centerX" id="h6u-mi-LoZ"/>
+                            <constraint firstItem="IiD-Ws-oxu" firstAttribute="height" secondItem="cYy-HT-i2d" secondAttribute="height" multiplier="0.07" id="lAf-6K-Rme"/>
+                            <constraint firstItem="Wkj-Oh-3nr" firstAttribute="bottom" secondItem="IiD-Ws-oxu" secondAttribute="bottom" constant="20" id="wdy-c5-jK6"/>
+                            <constraint firstItem="Ti5-C6-eGQ" firstAttribute="centerX" secondItem="cYy-HT-i2d" secondAttribute="centerX" id="wje-UO-vbt"/>
+                            <constraint firstItem="bRy-iN-Fl7" firstAttribute="centerY" secondItem="cYy-HT-i2d" secondAttribute="centerY" id="xhd-Mb-ZZK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wkj-Oh-3nr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="68O-yW-whW"/>
+                    <connections>
+                        <outlet property="NickTextField" destination="rlV-8K-3G1" id="YN5-wu-Blq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sx-iQ-HU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2390" y="-1367"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1Oi-eL-bEw"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+    <resources>
+        <image name="reverse" width="225" height="225"/>
+    </resources>
+</document>
