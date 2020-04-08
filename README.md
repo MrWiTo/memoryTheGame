@@ -12,11 +12,9 @@ Był to jeden z moich pierwszych projektów które jakiś czas temu wykonałem w
 Gra polega na odkryciu karty identycznej do znajdującej się na środku ekranu.
 
 Tworząc ją uczyłem się możliwości jakimi dysponuje XCode i Swift. Aplikacja poprawnie wyświetla się na różnych urządzeniach (poniżej przedstawiony jeden z ekranów na Iphone 11 i 8. Istnieje również możliwość zapisania wyniku do bazy danych na podstawie Code Data. W wzorcu MVVM komunikacja z bazą danych następuje w modelu jednak chciałem sprawdzić w jaki sposób można wywoływać metody z AppDelegate i ostatecznie nie zastosowałem tutaj żadnego wzorca projektowego. Wygląd aplikacji został zaprojektowany w StoryBoardzie a okrągłe przyciski są wynikiem stworzenia nowej klasy dziedziczącej po UIButton dzięki czemu można podawać stopień ich zaokrąglenia. Została tu również zastosowana animacja w zamian za zegar pokazujący czas.
-
+<br />
 ![gameScreen](/images/theGame.jpg)
----
-
-
+<br />
 ![mainScreen11](/images/mainScreen11.jpg) ![mainScreen8](/images/mainScreen8.jpg)
 
 * ## Instalacja
